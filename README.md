@@ -1,5 +1,4 @@
-# flutter_layout_example_0001
+# A Flutter Layout Example 0001
 
-A Flutter Layout Example
-
-![](images/screenshot.png)
+Screenshot
+![](lib/images/screenshot.png)
