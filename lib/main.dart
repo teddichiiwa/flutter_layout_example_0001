@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Layout Example 0001'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -55,48 +56,69 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Row(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(right: 8.0),
-                child: Icon(Icons.favorite, color: Colors.green),
-              ),
-              Text(
-                'BEAMS',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ],
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 0),
-            child: Text(
-              'Send programmable push notifications to iOS and Android devices',
-              style: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-          ),
-          Row(
-            children: <Widget>[
-              Text(
-                'EXPLORE BEAMS',
-                style: TextStyle(
-                  color: Colors.green,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 8.0),
-                child: Icon(
-                  Icons.arrow_forward,
-                  color: Colors.green,
-                ),
-              ),
-            ],
-          ),
+          FirstRow(),
+          SecondRow(),
+          ThirdRow(),
         ],
       ),
+    );
+  }
+}
+
+class FirstRow extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Padding(
+          padding: EdgeInsets.only(right: 8.0),
+          child: Icon(Icons.favorite, color: Colors.green),
+        ),
+        Text(
+          'BEAMS',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class SecondRow extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 0),
+      child: Text(
+        'Send programmable push notifications to iOS and Android devices',
+        style: TextStyle(
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+}
+
+class ThirdRow extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Text(
+          'EXPLORE BEAMS',
+          style: TextStyle(
+            color: Colors.green,
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 8.0),
+          child: Icon(
+            Icons.arrow_forward,
+            color: Colors.green,
+          ),
+        ),
+      ],
     );
   }
 }
